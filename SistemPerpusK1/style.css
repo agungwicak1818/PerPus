@@ -1,0 +1,467 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500;700&display=swap');
+
+* {
+    font-family: 'Ubuntu', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --hijau: #005f66;
+    --hijau-muda: rgb(0, 183, 196);
+    --hijau-muda-muda: rgb(233, 254, 255);
+    --white: #ffffff;
+    --hijau-tua: #00363a;
+    --gray: #ebebeb;
+}
+
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+}
+
+.main-login {
+    background: linear-gradient(rgba(0, 107, 107, 0.699), rgba(0, 0, 0, 0.87)), url(gambar/perpustakaan-rak.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    position: relative;
+    background-color: var(--hijau);
+
+}
+
+.login {
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    box-shadow: 5px 7px 15px rgba(0, 0, 0, 0.274);
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.login h2 {
+    color: var(--hijau);
+    margin-top: 20px;
+    padding: 0;
+    line-height: 0;
+    display: inline-block;
+    text-align: center;
+}
+
+.login .login-salah {
+     margin-top: -50px;
+     padding: 0;
+     margin-bottom: 30px;
+     text-align: center;
+     color: red;
+     font-style: italic;
+}
+
+.login .login-salah p {
+    font-size: small;
+}
+
+.login .login-box {
+    display: flex;
+    flex-direction: column;
+    color: var(--hijau);
+}
+
+.login .login-grub .login-box input[type="text"]{
+    color: var(--hijau);
+    margin: 5px 0px;
+    margin-bottom: 10px;
+    border: none;
+    outline: 1px solid var(--hijau);
+    padding: 5px 10px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.082);
+}
+.login .login-grub .login-box input[type="password"]{
+    color: var(--hijau);
+    margin: 5px 0px;
+    margin-bottom: 10px;
+    border: none;
+    outline: 1px solid var(--hijau);
+    padding: 5px 10px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.082);
+}
+
+.login .login-grub .login-box input[type="text"]:hover {
+    background-color: var(--hijau-muda-muda);
+}
+.login .login-grub .login-box input[type="text"]:focus-visible {
+    outline: 1px solid var(--hijau);
+}
+.login .login-grub .login-box input[type="password"]:hover {
+    background-color: var(--hijau-muda-muda);
+}
+.login .login-grub .login-box input[type="password"]:focus-visible {
+    outline: 1px solid var(--hijau);
+}
+
+
+.login .login-grub .login-box button {
+    border: none;
+    background-color: var(--hijau);
+    padding: 10px 0;
+    border-radius: 10px;
+    color: var(--white);
+    margin-top: 15px;
+}
+
+.login .login-grub .login-box button:hover{
+    background-color: var(--hijau-muda);
+}
+
+
+.navigation {
+    position: fixed;
+    width: 250px;
+    height: 100%;
+    background: var(--hijau);
+    border-left: 10px solid var(--hijau);
+    transition: 0.5s;
+    overflow: hidden;
+}
+
+.navigation ul {
+    position: absolute;
+    left: 0;
+    width: 100%;
+}
+
+.navigation ul li {
+    position: relative;
+    width: 100%;
+    list-style: none;
+}
+
+
+.navigation ul li:hover{
+    background-color: var(--white);
+    font-size: 18px;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+.navigation ul li a,h2 {
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: var(--white);
+    height: 90px;
+    line-height: 90px;
+    text-align: center;
+    padding-left: 15px;
+}
+
+.navigation ul li:hover h2 {
+    color: var(--hijau);
+}
+
+.navigation ul li:hover a {
+    color: var(--hijau);
+}
+
+.navigation ul li:hover a::before{
+    content: "";
+    position: absolute;
+    right: 0;
+    top: -50px;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border-radius: 50%;
+    box-shadow: 35px 35px 0 10px var(--white);
+    pointer-events: none;
+}
+
+.navigation ul li:hover a::after{
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: -50px;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border-radius: 50%;
+    box-shadow: 35px -35px 0 10px var(--white);
+    pointer-events: none;
+}
+
+.main {
+    position: relative;
+    width: calc(100% - 250px);
+    left: 250px;
+    min-height: 100vh;
+    background: var(--white);
+}
+
+.welcome {
+    width: 100%;
+}
+
+.welcome .ucapan h2{
+    padding: 0px 30px;
+    color: var(--hijau);
+}
+
+.welcome .gambar-beranda img {
+    display: flex;
+    margin: auto;
+    width: 800px;
+}
+
+
+
+.top-bar {
+    color: var(--hijau);
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 30px;
+}
+
+.top-bar .nama-menu h2 {
+    padding: 0;
+    color: var(--hijau);
+}
+
+.top-bar .btn-tambah h2 {
+    padding: 0;
+    color: var(--hijau);
+}
+
+.top-bar .btn-tambah a {
+    background-color: var(--hijau);
+    color: var(--white);
+    padding: 9px;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+
+.top-bar .btn-tambah a:hover {
+    background-color: var(--hijau-muda);
+}
+
+.top-bar input{
+    font-weight: 400;
+    color: var(--hijau);
+    outline: none;
+    width: 300px;
+    height: 30px;
+    border-radius: 10px;
+    border: solid 2px var(--hijau);
+    padding-left: 15px;
+  }
+
+  
+  .top-bar button {
+    text-align: center;
+    color: var(--white);
+    display: inline-block;
+    padding: 0px 7px;
+    height: 30px;
+    border-radius: 10px 10px 10px 10px;
+    background-color: var(--hijau);
+    border: solid 2px var(--hijau);
+    cursor: pointer;
+  }
+
+  .top-bar button:hover {
+    border-color: var(--hijau-muda);
+    background-color: var(--hijau-muda);
+  }
+
+.details {
+    width: 100%;
+    display: flex;
+    position: relative;
+    background-color: var(--white);
+    padding-top: 40px;
+}
+
+.details table {
+    width: 100%;
+    margin: 0px 30px;
+    border-collapse: collapse;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+}
+
+.details table th{
+    color: var(--white);
+    padding: 10px 10px;
+    background-color: var(--hijau);
+}
+
+.details table tr:first-child th:first-child{
+    border-top-left-radius: 10px;
+}
+.details table tr:first-child th:last-child{
+    border-top-right-radius: 10px;
+}
+.details table tr:last-child td:first-child{
+    border-bottom-left-radius: 10px;
+}
+.details table tr:last-child td:last-child{
+    border-bottom-right-radius: 10px;
+}
+.details table tr td:last-child {
+    text-align: center;
+}
+.details table tr td:first-child {
+    text-align: center;
+}
+
+.details table .baris-ganjil{
+    background-color: var(--white);
+}
+
+.details table .baris-genap{
+    background-color: var(--gray);
+}
+
+.details table td{
+    color: var(--hijau);
+    padding: 5px 10px;
+}
+
+.details i {
+    color: var(--hijau-muda);
+}
+
+.details .notify-kosong {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.details .notify-kosong p {
+    color: var(--hijau);
+}
+
+table .gambar-anggota {
+    width: 50px;
+    border-radius: 5px;
+}
+
+
+.input-grub {
+    background-color: var(--white);
+    display: flex;
+    margin: auto;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid var(--hijau);
+}
+
+.input-grub .input-box {
+    display: flex;
+    flex-direction: column;
+    color: var(--hijau);
+}
+
+.input-grub .input-box input[type="text"] {
+    color: var(--hijau);
+    margin: 5px 0px;
+    margin-bottom: 10px;
+    border: none;
+    outline: 1px solid var(--hijau);
+    padding: 5px 10px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.082);
+}
+
+.input-grub .input-box input[type="file"]::-webkit-file-upload-button {
+    color: var(--hijau);
+    border: none;
+    padding: 5px;
+    border-radius: 10px;
+}
+.input-grub .input-box input[type="file"]::-webkit-file-upload-button:hover {
+    background-color: var(--hijau-muda);
+    color: var(--white);
+}
+.input-grub .input-box input[type="file"] {
+    outline: 1px solid var(--hijau);
+    color: var(--hijau);
+    margin: 5px 0px;
+    margin-bottom: 7px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.082);
+}
+
+
+.input-grub .input-box input[type="text"]:hover {
+    background-color: var(--hijau-muda-muda);
+}
+.input-grub .input-box input[type="text"]:focus-visible {
+    outline: 1px solid var(--hijau);
+}
+
+.input-grub .input-box button {
+    border: none;
+    background-color: var(--hijau);
+    padding: 10px 0;
+    border-radius: 10px;
+    color: var(--white);
+    margin-top: 15px;
+}
+
+.input-grub .input-box button:hover{
+    background-color: var(--hijau-muda);
+}
+
+.input-grub .input-box .select-custom{
+    color: var(--hijau);
+    padding: 5px 10px;
+    margin: 5px 0px;
+    margin-bottom: 10px;
+    background-color: var(--white);
+    border: none;
+    outline: 1px solid var(--hijau);
+    border-radius: 10px;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.082);
+}
+
+
+.input-grub .input-box .select-custom:hover {
+    background-color: var(--hijau-muda-muda);
+}
+
+.input-grub .input-box .select-custom option {
+    background-color: var(--white);
+}
+
+.gambar-profil {
+    width: 70px;
+    margin: 5px 0px;
+    border-radius: 10px;
+}
+
+.img-profil {
+    display: flex;
+    width: 100px;
+    margin: auto;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
